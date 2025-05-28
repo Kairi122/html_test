@@ -1,47 +1,126 @@
-h1{
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
     text-align: center;
     color: rgb(42, 81, 2);
+    font-size: 2em;
 }
 
 form {
-    text-align: center;  
+    text-align: center;
     margin: 50px auto;
     border-radius: 10px;
+    max-width: 450px; 
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #f9f9f9; 
 }
 
-input{
-    width: 300px;
+input {
+    width: 90%;
+    max-width: 350px;
     height: 50px;
     border-radius: 5px;
-    border-width: 2px;
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    font-size: 1.1em; 
 }
 
-.btn{
+.btn {
     text-align: center;
+    margin-top: 20px; 
 }
 
-button{
+button {
     margin: 10px;
     background: green;
     color: #fff;
     border-radius: 10px;
     cursor: pointer;
-    border-width: 1px;
-    border-color: #fff; 
+    border: 1px solid #fff;
     padding: 15px 50px;
+    font-size: 1em;
+    transition: background 0.3s ease; 
 }
 
-.contents{
-    right: 10px;
-    bottom: 10px;
+button:hover {
+    background: darkgreen; 
 }
 
-.image{
-    width: 80px;
+.contents {
+    text-align: right; 
+    margin-top: 30px; 
+}
+
+.image {
+    width: 100%;
+    max-width: 80px;
     height: auto;
+    display: inline-block; 
 }
 
-footer{
+footer {
     text-align: center;
     background-color: aquamarine;
+    padding: 20px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 50px; 
+}
+
+/* --- スマートフォン向けのスタイル (例: 画面幅が600px以下の場合) --- */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    form {
+        margin: 20px auto; 
+        padding: 15px;
+        width: 90%;
+    }
+
+    input {
+        width: 95%;
+        height: 45px; 
+        font-size: 1em; 
+    }
+
+    button {
+        padding: 12px 35px;
+        font-size: 0.9em;
+        margin: 8px;
+    }
+
+    .image {
+        max-width: 60px; 
+    }
+}
+
+/* --- タブレット向けのスタイル (例: 画面幅が601pxから900pxの場合) --- */
+@media (min-width: 601px) and (max-width: 900px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    form {
+        margin: 30px auto;
+        padding: 25px;
+        max-width: 500px; 
+    }
+
+    input {
+        width: 85%; 
+    }
+
+    button {
+        padding: 12px 40px;
+    }
 }
